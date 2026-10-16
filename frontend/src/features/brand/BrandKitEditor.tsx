@@ -51,7 +51,7 @@ function ColorRow({ color, onChange, onRemove, index }: { color: BrandColor; onC
         hideLabel
         value={draft}
         maxLength={7}
-        error={valid ? undefined : 'Use a hex colour like #3e8b5a.'}
+        error={valid ? undefined : 'Use a hex colour like #0062a0.'}
         onChange={(event) => {
           setDraft(event.target.value)
           // Invalid text is passed up as-is so the form knows it cannot be saved yet.
@@ -68,7 +68,7 @@ function ColorRow({ color, onChange, onRemove, index }: { color: BrandColor; onC
 function EditorForm({ kit, busy, error, onClose, onSave }: { kit: BrandKit | null; busy: boolean; error?: string; onClose(): void; onSave(input: BrandKitInput): void }) {
   const [name, setName] = useState(kit?.name ?? '')
   const [isDefault, setIsDefault] = useState(kit?.is_default ?? false)
-  const [colors, setColors] = useState<BrandColor[]>(kit?.colors ?? [{ id: newId(), name: '', hex: '#3e8b5a' }])
+  const [colors, setColors] = useState<BrandColor[]>(kit?.colors ?? [{ id: newId(), name: '', hex: '#0062a0' }])
   const [fonts, setFonts] = useState<BrandFont[]>(kit?.fonts ?? [])
   const [logoIds, setLogoIds] = useState<string[]>(kit?.logos.map((logo) => logo.id) ?? [])
   const fontList = useAllFonts()

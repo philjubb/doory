@@ -155,8 +155,8 @@
   position: relative;
   margin-top: var(--space-16);
   padding: var(--space-12) var(--space-4) var(--space-8);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--ih-blue-25);
+  color: #ffffff;
 }
 
 .footerInner {
@@ -174,11 +174,13 @@
   flex-direction: column;
   gap: var(--space-4);
   max-width: 22rem;
-  color: var(--paper);
+  color: #ffffff;
 }
 
-.footerBrand p {
-  color: rgb(245 242 234 / 0.75);
+/* the logo needs clear space of half its height (14px) before the name */
+.footerBrand .footerName {
+  margin-top: var(--space-2);
+  font-weight: 700;
 }
 
 .footerNav {
@@ -189,13 +191,11 @@
 
 .footerHeading {
   margin-bottom: var(--space-3);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ls-sun);
+  color: #ffffff;
 }
 
 .footerNav ul {
@@ -205,42 +205,36 @@
 }
 
 .footerNav a {
-  color: var(--paper);
-  font-weight: 500;
-}
-
-.footerNav a:hover {
-  color: var(--ls-sun);
-}
-
-.legal,
-.business {
-  position: relative;
-  max-width: 76rem;
-  margin: var(--space-10) auto 0;
-  font-size: var(--text-sm);
-  color: rgb(245 242 234 / 0.7);
-}
-
-.legal {
-  padding-top: var(--space-6);
-  border-top: 1px solid rgb(245 242 234 / 0.16);
-}
-
-.business {
-  margin-top: var(--space-2);
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-}
-
-.legal a {
-  color: var(--paper);
+  color: #ffffff;
+  font-weight: 400;
   text-decoration: underline;
-  text-decoration-color: rgb(245 242 234 / 0.35);
   text-underline-offset: 3px;
 }
 
-.legal a:hover {
-  color: var(--ls-sun);
+.legal {
+  position: relative;
+  max-width: 76rem;
+  margin: var(--space-10) auto 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--ih-blue-40);
+  font-size: var(--text-sm);
+  color: #ffffff;
+}
+
+.legal a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Phones: the logo cannot be cropped, so it shrinks (staying above its 16px minimum) and the header CTA gives way;
+   the hero repeats it just below. */
+@media (max-width: 480px) {
+  .logo > span {
+    --logo-h: 22px !important;
+  }
+
+  .headerCta {
+    display: none;
+  }
 }

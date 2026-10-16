@@ -11,7 +11,7 @@ export function AuthLayout() {
     <div className={styles.page}>
       <div className={styles.formSide}>
         <header className={styles.top}>
-          <Link to="/" aria-label="Liteseed Design home" className={styles.logo}>
+          <Link to="/" aria-label="Island Health Design home" className={styles.logo}>
             <Logo height={30} />
           </Link>
         </header>

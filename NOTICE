@@ -36,6 +36,8 @@ Fonts served to every visitor (SIL Open Font License 1.1, https://openfontlicens
   Inter                          Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
   Plus Jakarta Sans              Copyright 2020 The Plus Jakarta Sans Project Authors
                                  (https://github.com/tokotype/PlusJakartaSans)
+  BC Sans                        Copyright Province of British Columbia (https://github.com/bcgov/bc-sans);
+                                 based on Noto Sans, Copyright Google LLC
   The fonts of the editor's catalogue are downloaded by `manage.py sync_fonts` and keep their own licence
   (OFL-1.1, Apache-2.0 or UFL-1.0); the families and licences are listed in THIRD_PARTY.md.
 

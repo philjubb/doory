@@ -44,7 +44,7 @@ const WAYS = [
 export default function ContactPage() {
   usePageMeta({
     title: 'Contact',
-    description: 'Report a bug, suggest an idea or report a security problem privately to the Doory project that Liteseed Design runs on.',
+    description: 'Report a bug, suggest an idea or report a security problem privately to the Doory project that Island Health Design runs on.',
     canonical: '/contact',
   })
   return (
@@ -56,7 +56,7 @@ export default function ContactPage() {
             Report a bug or <Accent>suggest a change</Accent>
           </>
         }
-        lead="Liteseed Design runs Doory, an open-source design platform. Bugs and ideas go to the Doory project on GitHub, where its maintainers can see them."
+        lead="Island Health Design runs Doory, an open-source design platform. Bugs and ideas go to the Doory project on GitHub, where its maintainers can see them."
       />
 
       <ul className={styles.ways}>

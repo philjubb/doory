@@ -1,97 +1,114 @@
 /*
- * Design tokens — the Liteseed theme (Liteseed brand guidelines v1): Forest text on a Paper ground, Leaf for the
- * green accents, Sun as the single highlight.
+ * Design tokens — the Island Health theme (Island Health brand standards, 2025 colour system).
+ * Blue is the primary family and Grey the neutral; no other families are combined with them. Red, Green and Orange
+ * are kept for meaning (errors, success, warnings). Colours are solid: no gradients or transparency effects.
+ * Text pairings follow the value-difference rule: 70+ for text under 18px, 50+ for large text, 30+ for graphics.
  * Components must use these variables and never hard-code colours.
  * There is one theme: the app is always light.
  *
  * The variable names (--violet-*, --pastel-*, --ink, --accent-lilac) are kept from upstream Doory so CSS merged from
- * upstream picks up the Liteseed colours; read "violet" as "the green scale".
+ * upstream picks up the brand colours; read "violet" as "the Blue family".
  */
 :root {
-  /* Liteseed palette */
-  --ls-forest: #1f3a2e;
-  --ls-paper: #f5f2ea;
-  --ls-leaf: #3e8b5a;
-  --ls-leaf-deep: #2e6b45;
-  --ls-sun: #f0b429;
+  /* Island Health colour system (values used here) */
+  --ih-blue-20: #003053;
+  --ih-blue-25: #003c66;
+  --ih-blue-30: #004979;
+  --ih-blue-40: #0062a0;
+  --ih-blue-50: #007cc8;
+  --ih-blue-55: #0089dc;
+  --ih-blue-90: #cbe6ff;
+  --ih-blue-93: #dbeeff;
+  --ih-blue-96: #eaf5ff;
+  --ih-blue-98: #f5faff;
+  --ih-grey-10: #141718;
+  --ih-grey-15: #202325;
+  --ih-grey-25: #363b3d;
+  --ih-grey-65: #989fa3;
+  --ih-grey-80: #c2c8ca;
+  --ih-grey-90: #e0e3e4;
+  --ih-grey-93: #e9ebec;
+  --ih-grey-96: #f3f4f4;
+  --ih-grey-98: #f9f9f9;
 
-  /* Brand scale — green, from Leaf tints to Forest */
-  --violet-50: #f0f5f1;
-  --violet-100: #e3eee6;
-  --violet-200: #c9dfd0;
-  --violet-300: #a7cbb2;
-  --violet-400: #6faf86;
-  --violet-500: var(--ls-leaf);
-  --violet-600: var(--ls-leaf-deep);
-  --violet-700: #285c3c;
-  --violet-800: #234d34;
-  --violet-900: #1f3f2f;
-  --violet-950: #142820;
+  /* Brand scale — the Blue family */
+  --violet-50: var(--ih-blue-98);
+  --violet-100: var(--ih-blue-96);
+  --violet-200: var(--ih-blue-93);
+  --violet-300: var(--ih-blue-90);
+  --violet-400: #78c0ff;
+  --violet-500: var(--ih-blue-55);
+  --violet-600: var(--ih-blue-40);
+  --violet-700: var(--ih-blue-30);
+  --violet-800: var(--ih-blue-25);
+  --violet-900: var(--ih-blue-20);
+  --violet-950: #00172c;
 
-  /* Ink, paper and tints — used for illustration and accents */
-  --ink: var(--ls-forest);
-  --paper: var(--ls-paper);
-  --pastel-lilac: #c9dfd0;
-  --pastel-pink: #f8dc94;
-  --pastel-blush: var(--ls-sun);
-  --pastel-butter: #fbe9b7;
-  --pastel-mint: #d5e8da;
-  --pastel-sky: #e1e8e3;
+  /* Ink, paper and tints. Upstream used pastels for decoration; here they are pale Blue and Grey. */
+  --ink: var(--ih-grey-10);
+  --paper: #ffffff;
+  --pastel-lilac: var(--ih-blue-93);
+  --pastel-pink: var(--ih-blue-93);
+  --pastel-blush: var(--ih-blue-55);
+  --pastel-butter: var(--ih-blue-90);
+  --pastel-mint: var(--ih-grey-93);
+  --pastel-sky: var(--ih-blue-96);
 
-  /* Semantic — light. The accent is Forest; selected and hovered things get a pale Leaf wash, and Leaf Deep is the
-     drawn accent and link colour (--accent-lilac). */
-  --color-brand: var(--ink);
-  --color-brand-hover: #2b4e3e;
-  --color-brand-active: #142820;
-  --color-brand-soft: #e6efe8;
-  --color-brand-soft-hover: #d7e7db;
-  --color-on-brand: var(--paper);
-  --accent-lilac: var(--ls-leaf-deep);
+  /* Semantic — light. Buttons and selected things are Blue; Blue 25 is the link colour. */
+  --color-brand: var(--ih-blue-30);
+  --color-brand-hover: var(--ih-blue-25);
+  --color-brand-active: var(--ih-blue-20);
+  --color-brand-soft: var(--ih-blue-96);
+  --color-brand-soft-hover: var(--ih-blue-93);
+  --color-on-brand: #ffffff;
+  --accent-lilac: var(--ih-blue-40);
 
-  /* Call to action: Forest buttons with Paper text; the one large CTA of a view is Sun with Forest text */
-  --color-cta: var(--ink);
-  --color-cta-hover: #2b4e3e;
-  --color-on-cta: var(--paper);
+  /* Call to action: solid Blue 30 with white text (value difference 70) */
+  --color-cta: var(--ih-blue-30);
+  --color-cta-hover: var(--ih-blue-25);
+  --color-on-cta: #ffffff;
   --color-cta-shadow: transparent;
-  --color-highlight: var(--ls-sun);
-  --color-highlight-hover: #f4c24f;
-  --color-on-highlight: var(--ls-forest);
+  --color-highlight: var(--ih-blue-30);
+  --color-highlight-hover: var(--ih-blue-25);
+  --color-on-highlight: #ffffff;
 
-  --color-bg: var(--ls-paper);
-  --color-bg-subtle: #efebe1;
-  --color-bg-muted: #e8e3d7;
+  --color-bg: var(--ih-grey-98);
+  --color-bg-subtle: var(--ih-grey-96);
+  --color-bg-muted: var(--ih-grey-93);
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
-  --color-canvas-workspace: #e7e3d8; /* area around the artboard in the editor */
-  --color-border: #e1dccf;
-  --color-border-strong: #cbc4b3;
+  --color-canvas-workspace: var(--ih-grey-93); /* area around the artboard in the editor */
+  --color-border: var(--ih-grey-90);
+  --color-border-strong: var(--ih-grey-65);
   --color-text: var(--ink);
-  --color-text-muted: #4c5c54;
-  --color-text-subtle: #5a6862;
-  --color-overlay: rgb(31 58 46 / 0.5);
+  --color-text-muted: var(--ih-grey-25);
+  --color-text-subtle: var(--ih-grey-25);
+  --color-overlay: rgb(0 23 44 / 0.5);
   /* The slideshow stage is black and its text white in every theme: it is a projected screen, not chrome. */
   --color-stage: #000000;
   --color-on-stage: #ffffff;
 
-  --color-success: #15803d;
-  --color-success-soft: #dcfce7;
-  --color-warning: #b45309;
-  --color-warning-soft: #fef3c7;
-  --color-danger: #b91c1c;
-  --color-danger-soft: #fee2e2;
-  --color-info: #1d4ed8;
-  --color-info-soft: #dbeafe;
+  /* Signal colours, used only for meaning */
+  --color-success: #18423a; /* Green 25 */
+  --color-success-soft: #e2faf4; /* Green 96 */
+  --color-warning: #6f3204; /* Orange 30 */
+  --color-warning-soft: #fef1e9; /* Orange 96 */
+  --color-danger: #821023; /* Red 30 */
+  --color-danger-soft: #fef0ef; /* Red 96 */
+  --color-info: var(--ih-blue-25);
+  --color-info-soft: var(--ih-blue-96);
 
-  --focus-ring: 0 0 0 3px rgb(46 107 69 / 0.3);
-  --selection-color: var(--ls-leaf-deep); /* canvas selection handles & guides */
-  --guide-color: #d97706;
+  --focus-ring: 0 0 0 3px var(--ih-blue-90);
+  --selection-color: var(--ih-blue-50); /* canvas selection handles & guides */
+  --guide-color: var(--ih-blue-30);
 
   /* Typography */
-  --font-sans: 'IBM Plex Sans Variable', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
-  /* Upstream's handwritten accent font; in Liteseed these spots are small Plex Mono labels. */
-  --font-hand: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* BC Sans; Noto Sans covers characters BC Sans lacks; Arial and Segoe UI are the approved fallbacks. */
+  --font-sans: 'BC Sans', 'Noto Sans', Arial, 'Segoe UI', system-ui, sans-serif;
+  --font-display: var(--font-sans);
+  /* Upstream's handwritten accent font; here those spots are small bold labels in BC Sans. */
+  --font-hand: var(--font-sans);
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --text-xs: 0.75rem;
   --text-sm: 0.8125rem;
   --text-base: 0.9375rem;
@@ -118,18 +135,18 @@
   --space-24: 6rem;
 
   /* Shape & depth */
-  /* Liteseed: 4 inputs and tags, 10 buttons and cards, 22 panels and app tiles */
+  /* Rectangles with slightly rounded corners for content areas */
   --radius-sm: 4px;
   --radius-md: 10px;
   --radius-lg: 14px;
-  --radius-xl: 22px;
+  --radius-xl: 16px;
   --radius-full: 999px;
   /* Flat: a hairline where upstream had soft shadows; floating menus and dialogs keep a light lift. */
-  --shadow-sm: 0 0 0 1px rgb(31 58 46 / 0.06);
-  --shadow-md: 0 0 0 1px rgb(31 58 46 / 0.08), 0 4px 12px rgb(31 58 46 / 0.08);
-  --shadow-lg: 0 0 0 1px rgb(31 58 46 / 0.08), 0 16px 36px rgb(31 58 46 / 0.14);
-  --shadow-artboard: 0 0 0 1px rgb(31 58 46 / 0.08), 0 8px 24px rgb(31 58 46 / 0.1);
-  --shadow-card: 0 0 0 1px rgb(31 58 46 / 0.1);
+  --shadow-sm: 0 0 0 1px rgb(20 23 24 / 0.06);
+  --shadow-md: 0 0 0 1px rgb(20 23 24 / 0.08), 0 4px 12px rgb(20 23 24 / 0.08);
+  --shadow-lg: 0 0 0 1px rgb(20 23 24 / 0.08), 0 16px 36px rgb(20 23 24 / 0.14);
+  --shadow-artboard: 0 0 0 1px rgb(20 23 24 / 0.08), 0 8px 24px rgb(20 23 24 / 0.1);
+  --shadow-card: 0 0 0 1px rgb(20 23 24 / 0.1);
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);

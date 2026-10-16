@@ -695,7 +695,7 @@ export const t = {
       tooLarge: 'The file is too large to upload. Fonts can be up to 10 MB.',
       rateLimited: (seconds: number | null) => (seconds ? `You are uploading too quickly. Try again in ${seconds} seconds.` : 'You are uploading too quickly. Try again in a moment.'),
       signedOut: 'You were signed out. Sign in again to upload fonts.',
-      offline: 'Could not reach Liteseed Design. Check your connection and try again.',
+      offline: 'Could not reach Island Health Design. Check your connection and try again.',
       invalid: 'The font was not accepted.',
       unknown: 'The upload failed. Try again.',
       unavailable: 'Uploading fonts is not available right now.',

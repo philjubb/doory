@@ -1,6 +1,6 @@
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   gap: var(--space-10);
   max-width: 68rem;
@@ -16,20 +16,17 @@
 
 .eyebrow {
   align-self: flex-start;
-  color: var(--accent-lilac);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .title {
   font-size: clamp(2.4rem, 5.5vw, 3.75rem);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.02em;
 }
 
 .lead {
@@ -37,45 +34,4 @@
   color: var(--color-text-muted);
   font-size: 1.0625rem;
   line-height: 1.55;
-}
-
-/* Leaf is fine here: titles are well above 24px */
-.accent {
-  color: var(--ls-leaf);
-  font-style: normal;
-}
-
-.stage {
-  display: grid;
-  place-items: center;
-  width: 12rem;
-  height: 12rem;
-  border-radius: var(--radius-xl);
-  background: var(--violet-100);
-}
-
-.sprout {
-  width: auto;
-  height: 7rem;
-}
-
-@media (max-width: 760px) {
-  .intro {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-    padding-top: var(--space-6);
-    text-align: center;
-  }
-
-  .copy {
-    align-items: center;
-  }
-
-  .eyebrow {
-    align-self: center;
-  }
-
-  .stage {
-    display: none;
-  }
 }

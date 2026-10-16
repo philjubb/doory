@@ -1,29 +1,32 @@
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
+  gap: var(--space-10);
   max-width: 76rem;
   margin: 0 auto;
-  padding: var(--space-2) var(--space-4) var(--space-16);
-  text-align: center;
+  padding: var(--space-12) var(--space-4) var(--space-16);
 }
 
-/* The sprout, the brand's one filled motif */
-.sprout {
-  width: auto;
-  height: 4.5rem;
-  margin-top: var(--space-12);
+/* Left-aligned copy: the heading first, then what to do next */
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 1100px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 .eyebrow {
-  margin-top: var(--space-6);
-  color: var(--accent-lilac);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 .title {
@@ -32,13 +35,6 @@
   font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-/* Leaf is fine here: the title is well above 24px */
-.accent {
-  color: var(--ls-leaf);
-  font-style: normal;
 }
 
 .lead {
@@ -54,9 +50,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-4);
-  margin-top: var(--space-16);
+  margin-top: var(--space-8);
 }
 
 .perks {
@@ -65,11 +61,9 @@
   justify-content: center;
   gap: var(--space-2) var(--space-5);
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 .perks li {
@@ -83,32 +77,30 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--ls-leaf);
+  background: var(--accent-lilac);
 }
 
 /* Or start with a size */
 .sizes {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-3);
   margin-top: var(--space-10);
 }
 
 .sizesLabel {
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  text-transform: uppercase;
 }
 
 .chips {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-2);
 }
 
@@ -142,13 +134,3 @@
   font-weight: 500;
 }
 
-@media (max-width: 640px) {
-  .sprout {
-    height: 3.5rem;
-    margin-top: var(--space-8);
-  }
-
-  .create {
-    margin-top: var(--space-12);
-  }
-}

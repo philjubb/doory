@@ -11,8 +11,8 @@ const FEATURES = [
   { icon: Share2, title: 'Sharing and comments', text: 'Share a view, comment or edit link, with a password if you want one.' },
   { icon: Download, title: 'Export', text: 'PNG, JPG, SVG and PDF, made in your browser. No watermarks.' },
   { icon: ShieldCheck, title: 'No account needed', text: 'Designs you make without an account stay in your browser until you sign up.' },
-  { icon: GitBranch, title: 'Built on Doory', text: 'Liteseed Design runs Doory, an open-source design platform. Its code is on GitHub.' },
-  { icon: Server, title: 'Self-hosted', text: 'Designs and uploads are stored on a Liteseed server, not a third-party cloud.' },
+  { icon: GitBranch, title: 'Built on Doory', text: 'Island Health Design runs Doory, an open-source design platform. Its code is on GitHub.' },
+  { icon: Server, title: 'Self-hosted', text: 'Designs and uploads are stored on this server, not a third-party cloud.' },
 ]
 
 const STEPS = [
@@ -24,7 +24,7 @@ const STEPS = [
 export default function FeaturesPage() {
   usePageMeta({
     title: 'Features',
-    description: 'What Liteseed Design can do: a full design editor, templates, brand kits, sharing and comments, and exports without watermarks.',
+    description: 'What Island Health Design can do: a full design editor, templates, brand kits, sharing and comments, and exports without watermarks.',
     canonical: '/features',
   })
   return (

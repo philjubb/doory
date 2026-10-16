@@ -23,12 +23,10 @@
 
 .hand {
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .heading {
@@ -36,7 +34,6 @@
   margin-top: var(--space-3);
   font-size: clamp(1.9rem, 4vw, 2.75rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 /* Features: plain cards, one per feature */
@@ -73,7 +70,6 @@
   color: var(--ink);
   font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
 }
 
 .noteText {

@@ -21,7 +21,6 @@
 .title {
   font-size: var(--text-3xl);
   font-weight: 600;
-  letter-spacing: -0.03em;
 }
 
 .lead {

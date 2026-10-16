@@ -96,7 +96,7 @@ export default function DashboardLayout() {
   return (
     <div className={styles.shell}>
       <aside className={styles.sidebar}>
-        <Link to="/dashboard" className={styles.logo} aria-label="Liteseed Design dashboard">
+        <Link to="/dashboard" className={styles.logo} aria-label="Island Health Design dashboard">
           <Logo height={30} />
         </Link>
         <nav aria-label="Dashboard" className={styles.nav}>
@@ -118,7 +118,7 @@ export default function DashboardLayout() {
       </aside>
       <div className={styles.column}>
         <header className={styles.topbar}>
-          <Link to="/dashboard" className={styles.mobileLogo} aria-label="Liteseed Design dashboard">
+          <Link to="/dashboard" className={styles.mobileLogo} aria-label="Island Health Design dashboard">
             <Logo variant="mark" height={30} />
           </Link>
           <DashboardSearch key={searchValue} initial={searchValue} />

@@ -15,13 +15,13 @@ const FAQ_ITEMS: FaqItem[] = [
   { question: 'Where are my designs stored?', answer: 'Guest designs and the images you upload live in your browser’s own storage on this device. Signed-in designs are stored in your account on this server, so you can open them anywhere.' },
   { question: 'What happens to my guest design when I sign up?', answer: 'We upload the images it uses, create the design in your account, and only then remove the local copy. If anything goes wrong along the way, your original stays untouched and you can try again.' },
   { question: 'Can I download my designs?', answer: 'Yes. Export as PNG, JPG, SVG or PDF. Exporting happens in your browser, so it works for guests too.' },
-  { question: 'What is it built on?', answer: 'Liteseed Design runs Doory, an open-source design platform. The code and setup notes are on GitHub.' },
+  { question: 'What is it built on?', answer: 'Island Health Design runs Doory, an open-source design platform. The code and setup notes are on GitHub.' },
 ]
 
 export default function FaqPage() {
   usePageMeta({
     title: 'FAQ',
-    description: 'Answers to common questions about Liteseed Design: accounts, cost, where designs are stored and exporting.',
+    description: 'Answers to common questions about Island Health Design: accounts, cost, where designs are stored and exporting.',
     canonical: '/faq',
   })
   return (

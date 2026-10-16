@@ -22,5 +22,5 @@ async def test_people_without_a_display_name_are_not_named_after_their_email_add
 
     await env.db(forget_the_name)
     peer = await env.open(env.owner)
-    assert peer.ready["user"]["name"] == "Liteseed Design user"
+    assert peer.ready["user"]["name"] == "Island Health Design user"
     assert "owner" not in json.dumps(peer.ready["user"])

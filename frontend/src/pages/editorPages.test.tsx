@@ -111,7 +111,7 @@ describe('/local/:localId', () => {
     expect(editor).toHaveAttribute('data-mode', 'guest')
     expect(within(editor).getByRole('heading', { name: 'My poster' })).toBeInTheDocument()
     expect(within(editor).getByRole('button', { name: 'Sign up' })).toBeInTheDocument()
-    expect(within(editor).getByRole('link', { name: 'Liteseed Design home' })).toHaveAttribute('href', '/')
+    expect(within(editor).getByRole('link', { name: 'Island Health Design home' })).toHaveAttribute('href', '/')
   })
 
   it('explains when the design is not in this browser', async () => {

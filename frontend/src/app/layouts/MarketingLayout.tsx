@@ -40,7 +40,7 @@ export function MarketingHeader() {
   return (
     <header className={styles.header}>
       <div className={styles.bar}>
-        <Link to="/" className={styles.logo} aria-label="Liteseed Design home">
+        <Link to="/" className={styles.logo} aria-label="Island Health Design home">
           <Logo height={30} />
         </Link>
         <div className={styles.desktopNav}>
@@ -59,7 +59,7 @@ export function MarketingHeader() {
               <Link to="/login" className={cx(styles.hideSmall, styles.signIn)}>
                 Sign in
               </Link>
-              <LinkButton to="/create" size="sm">
+              <LinkButton to="/create" size="sm" className={styles.headerCta}>
                 Start designing
               </LinkButton>
             </>
@@ -94,6 +94,7 @@ export function MarketingFooter() {
       <div className={styles.footerInner}>
         <div className={styles.footerBrand}>
           <Logo height={28} tone="dark" />
+          <p className={styles.footerName}>Island Health Design</p>
           <p>Posts, slides, posters and logos, made in your browser. Your designs stay on this server.</p>
         </div>
         <nav aria-label="Footer" className={styles.footerNav}>
@@ -145,7 +146,6 @@ export function MarketingFooter() {
         </a>{' '}
         · Released under the Attribution Assurance License.
       </p>
-      <p className={styles.business}>Liteseed Digital Media, a sole proprietorship of Phillip Jubb · BC reg. FM0709020</p>
     </footer>
   )
 }

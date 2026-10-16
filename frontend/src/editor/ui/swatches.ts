@@ -17,9 +17,9 @@ export function registerPalette(palette: Palette): () => void {
 
 registerPalette({
   id: 'doory',
-  label: 'Liteseed',
+  label: 'Island Health',
   order: 0,
-  colors: ['#1f3a2e', '#2e6b45', '#3e8b5a', '#f0b429', '#f5f2ea', '#ffffff'],
+  colors: ['#003c66', '#0062a0', '#0089dc', '#cbe6ff', '#eaf5ff', '#202325', '#e0e3e4', '#ffffff'],
 })
 registerPalette({
   id: 'vivid',

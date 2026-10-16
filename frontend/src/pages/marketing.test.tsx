@@ -20,7 +20,7 @@ describe('landing page', () => {
   it('leads with the guest-first promise and a primary call to action', async () => {
     renderApp('/')
     const hero = await screen.findByRole('heading', { level: 1 })
-    expect(hero).toHaveTextContent('Posts, slides and posters, made in your browser.')
+    expect(hero).toHaveTextContent('Posts, slides and posters, made in your browser')
     expect(screen.getByText(/Your designs are stored on\s+this server\./)).toBeInTheDocument()
     const cta = screen.getByRole('link', { name: 'Create a design' })
     expect(cta).toHaveAttribute('href', '/create')

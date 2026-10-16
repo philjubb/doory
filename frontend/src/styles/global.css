@@ -37,7 +37,6 @@ h4 {
   margin: 0;
   font-family: var(--font-display);
   line-height: var(--leading-tight);
-  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
@@ -174,6 +173,6 @@ samp {
   --color-brand-fill: var(--ink);
   --color-brand-fill-hover: var(--color-brand-hover);
   --color-brand-fill-active: var(--color-brand-active);
-  --color-brand-strong: var(--ls-leaf-deep);
+  --color-brand-strong: var(--ih-blue-25);
 }
 

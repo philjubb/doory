@@ -6,8 +6,8 @@
   gap: var(--space-8);
   padding: var(--space-12);
   overflow: hidden;
-  color: var(--paper);
-  background: var(--ink);
+  color: #ffffff;
+  background: var(--ih-blue-25);
 }
 
 @media (min-width: 960px) {
@@ -23,9 +23,10 @@
   min-height: 20rem;
 }
 
-.sprout {
+/* the vertical logo, well above its 60px minimum height */
+.logo {
   width: auto;
-  height: 12rem;
+  height: 11rem;
 }
 
 .copy {
@@ -35,12 +36,10 @@
 }
 
 .label {
-  color: var(--ls-sun);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 .headline {
@@ -48,5 +47,5 @@
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--paper);
+  color: #ffffff;
 }

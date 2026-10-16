@@ -44,7 +44,7 @@ def test_owner_email_is_never_exposed(anon, view_link, owner):
     owner.display_name = ""
     owner.save()
     response = anon.get(shared_url(view_link))
-    assert response.json()["owner"]["name"] == "Liteseed Design user"
+    assert response.json()["owner"]["name"] == "Island Health Design user"
     assert "owner@example.com" not in response.content.decode()
     assert "owner" not in response.json()["owner"]["name"].lower()
 

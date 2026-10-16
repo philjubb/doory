@@ -29,10 +29,10 @@ export interface Placement {
   y: number
 }
 
-export const SHAPE_FILL = '#3e8b5a'
+export const SHAPE_FILL = '#0062a0'
 /** The brand colour at 25 % opacity: the light tint every basic shape starts with (a translucent fill). */
-export const SHAPE_TINT = '#3e8b5a40'
-export const TEXT_COLOR = '#1f3a2e'
+export const SHAPE_TINT = '#0062a040'
+export const TEXT_COLOR = '#141718'
 export const HEADING_FONT = fontStack('Plus Jakarta Sans', 'sans-serif')
 export const BODY_FONT = fontStack('Inter', 'sans-serif')
 

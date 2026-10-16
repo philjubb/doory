@@ -48,7 +48,7 @@ def send_verification_email(user: User) -> None:
     token = email_verification_token_generator.make_token(user)
     _send(
         "verify_email",
-        "Verify your email address for Liteseed Design",
+        "Verify your email address for Island Health Design",
         user,
         {"action_url": _link("/verify-email", user, token)},
     )
@@ -58,7 +58,7 @@ def send_password_reset_email(user: User) -> None:
     token = password_reset_token_generator.make_token(user)
     _send(
         "reset_password",
-        "Reset your Liteseed Design password",
+        "Reset your Island Health Design password",
         user,
         {"action_url": _link("/reset-password", user, token)},
     )

@@ -1,13 +1,12 @@
 .logo {
   display: inline-flex;
   flex: none;
-  align-items: flex-end;
-  gap: calc(var(--logo-h) * 0.32);
+  align-items: center;
   height: var(--logo-h);
-  color: inherit;
 }
 
-.word {
+/* The horizontal logo keeps its own proportions (1015 x 145) */
+.full {
   width: auto;
   height: var(--logo-h);
 }
@@ -15,22 +14,4 @@
 .mark {
   width: var(--logo-h);
   height: var(--logo-h);
-  border-radius: calc(var(--logo-h) * 0.22);
-}
-
-.label {
-  /* sits on the wordmark's baseline */
-  padding-bottom: calc(var(--logo-h) * 0.02);
-  color: var(--ls-leaf-deep);
-  font-family: var(--font-mono);
-  font-size: max(11px, calc(var(--logo-h) * 0.4));
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.dark .label {
-  color: var(--ls-sun);
 }

@@ -95,12 +95,10 @@
   bottom: -2.6rem;
   left: 0;
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 /* A template picture filling its card. */
@@ -133,5 +131,13 @@
   .art:hover .right,
   .art:focus-within .right {
     transform: translateX(12.5rem) translateY(1.1rem) rotate(6deg);
+  }
+}
+
+/* beside the hero copy (two columns), the fan takes half the width */
+@media (min-width: 1100px) {
+  .fan {
+    --s: 0.68;
+    margin-top: 0;
   }
 }

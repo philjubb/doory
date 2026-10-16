@@ -1,13 +1,13 @@
 {
-  "name": "Liteseed Design",
-  "short_name": "Liteseed",
+  "name": "Island Health Design",
+  "short_name": "Design",
   "description": "Posts, slides, posters and logos, made in your browser.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#F5F2EA",
-  "theme_color": "#1F3A2E",
+  "background_color": "#FFFFFF",
+  "theme_color": "#003C66",
   "categories": [
     "design",
     "graphics",

@@ -19,7 +19,7 @@ export function RequireAuth({ keepOpenWhenSessionEnds = false }: { keepOpenWhenS
     return (
       <EmptyState
         icon={<WifiOff size={28} />}
-        title="We can’t reach Liteseed Design"
+        title="We can’t reach Island Health Design"
         description="Check your connection and try again. Your designs are safe."
         action={<Button onClick={retryBootstrap}>Try again</Button>}
         role="alert"

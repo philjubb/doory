@@ -50,7 +50,6 @@
   color: var(--ink);
   font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .wayText {
@@ -91,19 +90,16 @@
 
 .hand {
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
   transform-origin: left center;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .noteTitle {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 600;
-  letter-spacing: -0.03em;
 }
 
 .noteLead {

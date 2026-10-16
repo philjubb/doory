@@ -2,7 +2,7 @@ import { Hero } from '@/features/landing/Hero'
 import { LocalDesignsStrip } from '@/features/landing/LocalDesignsStrip'
 import { usePageMeta } from '@/lib/usePageMeta'
 
-const DESCRIPTION = 'Liteseed Design: make social posts, slides, posters and logos in your browser. No account needed to start.'
+const DESCRIPTION = 'Island Health Design: make social posts, slides, posters and logos in your browser. No account needed to start.'
 
 export default function LandingPage() {
   usePageMeta({ description: DESCRIPTION, canonical: '/', image: '/og-image.png' })

@@ -152,7 +152,7 @@ AUTH_EMAIL_COOLDOWN_SECONDS = 60  # minimum gap between reset / verification ema
 # ---- Email ----
 EMAIL_CONFIG = env.email("EMAIL_URL", default="consolemail://")
 vars().update(EMAIL_CONFIG)
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="Liteseed Design <no-reply@localhost>")
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="Island Health Design <no-reply@localhost>")
 EMAIL_SEND_ASYNC = env.bool("EMAIL_SEND_ASYNC", default=True)  # send off the request thread
 
 # ---- Integrations (all optional) ----
@@ -192,7 +192,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Liteseed Design API",
+    "TITLE": "Island Health Design API",
     "DESCRIPTION": "Open-source design platform API.",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
@@ -211,23 +211,23 @@ SPECTACULAR_SETTINGS = {
 
 # ---- Admin theme (django-unfold) ----
 UNFOLD = {
-    "SITE_TITLE": "Liteseed Design Admin",
-    "SITE_HEADER": "Liteseed Design",
-    "SITE_SYMBOL": "eco",
+    "SITE_TITLE": "Island Health Design Admin",
+    "SITE_HEADER": "Island Health Design",
+    "SITE_SYMBOL": "palette",
     "COLORS": {
-        # Liteseed green scale, Leaf (500) and Leaf Deep (600) at the centre
+        # Island Health Blue family; 600 is Blue 40, 700 Blue 30
         "primary": {
-            "50": "240 245 241",
-            "100": "227 238 230",
-            "200": "201 223 208",
-            "300": "167 203 178",
-            "400": "111 175 134",
-            "500": "62 139 90",
-            "600": "46 107 69",
-            "700": "40 92 60",
-            "800": "35 77 52",
-            "900": "31 63 47",
-            "950": "20 40 32",
+            "50": "245 250 255",
+            "100": "234 245 255",
+            "200": "203 230 255",
+            "300": "149 205 255",
+            "400": "38 165 255",
+            "500": "0 124 200",
+            "600": "0 98 160",
+            "700": "0 73 121",
+            "800": "0 60 102",
+            "900": "0 48 83",
+            "950": "0 23 44",
         },
     },
 }

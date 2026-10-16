@@ -28,7 +28,7 @@ PT_PER_PX = 0.75  # one CSS px in PDF points
 # Anything outside this range was not printed as asked (and would have cropped or shifted the artwork).
 MAX_SHEET_EXCESS_PT = 2.0
 MIN_SHEET_EXCESS_PT = -0.01
-CREATOR = "Liteseed Design"
+CREATOR = "Island Health Design"
 
 
 def _box(left: float, top: float, width_px: float, height_px: float) -> RectangleObject:

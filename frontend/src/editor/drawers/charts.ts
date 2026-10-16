@@ -14,7 +14,7 @@ export const CHART_SAMPLES: Record<ChartKind, readonly number[]> = {
   donut: [50, 30, 20],
 }
 
-export const CHART_COLORS: readonly string[] = ['#2e6b45', '#f0b429', '#1f3a2e', '#6faf86', '#c9a227']
+export const CHART_COLORS: readonly string[] = ['#003c66', '#0089dc', '#71787c', '#95cdff', '#c2c8ca']
 const INK = '#1c1517'
 const SIZE = 200
 

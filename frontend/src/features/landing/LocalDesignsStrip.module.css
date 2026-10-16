@@ -22,18 +22,15 @@
 
 .eyebrow {
   color: var(--accent-lilac);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .heading {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .lead {
@@ -44,7 +41,7 @@
   color: var(--ink);
   font-weight: 800;
   text-decoration: underline;
-  text-decoration-color: var(--ls-leaf);
+  text-decoration-color: currentColor;
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
@@ -66,7 +63,7 @@
   padding: var(--space-2) var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
   background: #ffffff;
-  box-shadow: 0 0 0 1px rgb(31 58 46 / 0.06);
+  box-shadow: 0 0 0 1px rgb(20 23 24 / 0.06);
   transition: transform var(--duration-slow) var(--ease-out);
 }
 
@@ -106,7 +103,6 @@
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.01em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -115,12 +111,10 @@
 .meta {
   padding: 0 var(--space-1);
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .delete {

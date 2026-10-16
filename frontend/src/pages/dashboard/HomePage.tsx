@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { DesignTile } from '@/features/dashboard/DesignTile'
-import sprout from '@/assets/brand/liteseed-icon.svg'
 import { createUrl, getPreset, presetParts, QUICK_PRESET_IDS } from '@/features/presets'
 import { TemplateCard } from '@/features/templates/TemplateCard'
 import { useDesignsList, useTemplatesList } from '@/lib/api/hooks'
@@ -63,7 +62,6 @@ export default function HomePage() {
             )
           })}
         </ul>
-        <img className={homeStyles.sprout} src={sprout} alt="" width={52} height={78} draggable={false} />
       </section>
 
       <section aria-labelledby="recent" className={styles.section}>

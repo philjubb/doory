@@ -342,7 +342,7 @@ def test_every_page_of_a_mixed_design_gets_bleed_and_marks_of_its_own_size(clien
 def test_document_information(client, chromium):
     pdf = reader(post(client, [svg_page()], title="Menu card", lang="de-CH"))
     assert pdf.metadata.title == "Menu card"
-    assert pdf.metadata.creator == "Liteseed Design"
+    assert pdf.metadata.creator == "Island Health Design"
     assert pdf.trailer["/Root"]["/Lang"] == "de-CH"
     assert reader(post(client, [svg_page()])).trailer["/Root"]["/Lang"] == "en"
 

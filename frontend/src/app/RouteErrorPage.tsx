@@ -16,8 +16,8 @@ export function RouteErrorPage() {
           missing
             ? 'The link may be broken, or the page may have moved.'
             : chunkFailed
-              ? 'A part of Liteseed Design couldn’t be loaded. Your connection may have dropped, or a new version was released. Reload to continue. Your work is saved.'
-              : 'Liteseed Design hit an unexpected problem. Reloading usually fixes it, and your saved work is safe.'
+              ? 'A part of Island Health Design couldn’t be loaded. Your connection may have dropped, or a new version was released. Reload to continue. Your work is saved.'
+              : 'Island Health Design hit an unexpected problem. Reloading usually fixes it, and your saved work is safe.'
         }
         role="alert"
         action={
