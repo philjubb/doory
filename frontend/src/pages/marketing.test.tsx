@@ -20,8 +20,8 @@ describe('landing page', () => {
   it('leads with the guest-first promise and a primary call to action', async () => {
     renderApp('/')
     const hero = await screen.findByRole('heading', { level: 1 })
-    expect(hero).toHaveTextContent('Make something lovely today.')
-    expect(screen.getByText(/Free, and no sign-up to start\./)).toBeInTheDocument()
+    expect(hero).toHaveTextContent('Posts, slides and posters, made in your browser.')
+    expect(screen.getByText(/Your designs are stored on\s+this server\./)).toBeInTheDocument()
     const cta = screen.getByRole('link', { name: 'Create a design' })
     expect(cta).toHaveAttribute('href', '/create')
     for (const [name, slug] of [
@@ -98,14 +98,14 @@ describe('landing page', () => {
     expect(within(dialog).getByText('No matching size')).toBeInTheDocument()
   })
 
-  it('has landmarks, a skip link and links to the open-source repository', async () => {
+  it('has landmarks, a skip link and credits the Doory repository in the footer', async () => {
     renderApp('/')
     await screen.findByRole('heading', { level: 1 })
     expect(screen.getAllByRole('banner').length).toBeGreaterThan(0)
     expect(screen.getByRole('main')).toHaveAttribute('id', 'main')
     expect(screen.getByRole('contentinfo')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Skip to content' })).toHaveAttribute('href', '#main')
-    const github = within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', { name: 'GitHub' })
+    const github = within(screen.getByRole('contentinfo')).getByRole('link', { name: 'github.com/shaongitbd/doory' })
     expect(github).toHaveAttribute('href', 'https://github.com/shaongitbd/doory')
     expect(github).toHaveAttribute('rel', expect.stringContaining('noopener'))
   })
@@ -141,30 +141,30 @@ describe('features, FAQ and contact pages', () => {
     first.unmount()
 
     const features = renderApp('/features')
-    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('All the tools. None of the paywalls.')
+    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('Every tool, no paid plan.')
     expect(screen.getByRole('heading', { name: 'Brand kits' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Step 3: Save it to an account/ })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Create a design' })).toHaveAttribute('href', '/create')
     features.unmount()
 
     const faq = renderApp('/faq')
-    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('Frequently asked questions')
+    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('Common questions')
     faq.unmount()
 
     renderApp('/contact')
-    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('We’d love to hear from you.')
+    expect(await screen.findByRole('heading', { level: 1 })).toHaveTextContent('Report a bug or suggest a change')
   })
 
   it('the FAQ is an accessible accordion with one answer open at a time', async () => {
     renderApp('/faq')
     const first = await screen.findByRole('button', { name: 'Do I need an account to design?' })
     expect(first).toHaveAttribute('aria-expanded', 'true')
-    const second = screen.getByRole('button', { name: 'Is Doory really free?' })
+    const second = screen.getByRole('button', { name: 'Does it cost anything?' })
     expect(second).toHaveAttribute('aria-expanded', 'false')
     await userEvent.click(second)
     expect(second).toHaveAttribute('aria-expanded', 'true')
     expect(first).toHaveAttribute('aria-expanded', 'false')
-    expect(screen.getByRole('region', { name: 'Is Doory really free?' })).toBeVisible()
+    expect(screen.getByRole('region', { name: 'Does it cost anything?' })).toBeVisible()
     expect(screen.getByRole('link', { name: 'Get in touch' })).toHaveAttribute('href', '/contact')
   })
 

@@ -1,4 +1,4 @@
-/* The top of home: a lilac panel with the sizes to start from, and the bunny peeking over its edge. */
+/* The top of home: a Leaf-tinted panel with the sizes to start from, and the sprout at its side. */
 .hero {
   position: relative;
   display: flex;
@@ -7,7 +7,7 @@
   padding: var(--space-6) var(--space-6) var(--space-6);
   padding-right: 11rem;
   border-radius: var(--radius-xl);
-  background: linear-gradient(120deg, #efeaff 0%, #f6f0ff 55%, #fdeef3 100%);
+  background: var(--violet-100);
   overflow: hidden;
 }
 
@@ -21,8 +21,8 @@
 
 .heroTitle {
   font-size: var(--text-3xl);
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .heroLinks {
@@ -32,12 +32,13 @@
   font-weight: 600;
 }
 
-.bunny {
+.sprout {
   position: absolute;
-  right: 1.5rem;
-  bottom: -2.2rem;
-  width: 8.5rem;
-  height: auto;
+  top: 50%;
+  right: 3.5rem;
+  width: auto;
+  height: 6rem;
+  transform: translateY(-50%);
   pointer-events: none;
   user-select: none;
 }
@@ -47,7 +48,7 @@
     padding-right: var(--space-6);
   }
 
-  .bunny {
+  .sprout {
     display: none;
   }
 }
@@ -72,8 +73,8 @@
   padding: var(--space-4) var(--space-3) var(--space-3);
   background: var(--color-surface);
   border: 1px solid transparent;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 1px 2px rgb(43 28 23 / 0.06);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 1px rgb(31 58 46 / 0.06);
   color: var(--color-text);
   text-align: center;
   transition:

@@ -1,45 +1,27 @@
 import { PenLine } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import bunny from '@/assets/bunny-sticker.webp'
+import sprout from '@/assets/brand/liteseed-icon.svg'
 import { CreateDesignDialog } from '@/features/create/CreateDesignDialog'
 import { createUrl, getPreset, QUICK_PRESET_IDS } from '@/features/presets'
 import { Button, LinkButton } from '@/ui'
-import { Doodles } from './Doodles'
 import { HeroCards } from './HeroCards'
 import styles from './Hero.module.css'
 
-const PERKS = ['No watermark', 'No ads', 'Open source']
+const PERKS = ['No watermarks', 'No ads', 'Self-hosted']
 
 export function Hero() {
   const [customOpen, setCustomOpen] = useState(false)
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
-      <Doodles />
-      <div className={styles.stage}>
-        <span className={styles.hearts} aria-hidden="true">
-          <span>♥</span>
-          <span>♥</span>
-        </span>
-        <img className={styles.bunny} src={bunny} alt="" width={523} height={713} draggable={false} />
-        <span className={styles.ground} aria-hidden="true" />
-        <span className={styles.bubble} aria-hidden="true">
-          hi there!
-        </span>
-      </div>
-
+      <img className={styles.sprout} src={sprout} alt="" width={52} height={78} draggable={false} />
+      <p className={styles.eyebrow}>Liteseed Design</p>
       <h1 id="hero-title" className={styles.title}>
-        Make something{' '}
-        <em className={styles.accent}>
-          lovely
-          <svg viewBox="0 0 200 18" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M4 12 C 50 4, 110 4, 196 10" />
-          </svg>
-        </em>{' '}
-        today.
+        Posts, slides and posters, <em className={styles.accent}>made in your browser.</em>
       </h1>
       <p className={styles.lead}>
-        Cards, posts, slides, posters and little logos, made right in your browser. Free, and no sign-up to start.
+        Start from a size or a template, edit it here, and download it as an image, PDF or video. Your designs are stored on
+        this server.
       </p>
 
       <HeroCards />
@@ -48,12 +30,6 @@ export function Hero() {
         <LinkButton to="/create" size="lg" rightIcon={<PenLine size={18} aria-hidden="true" />}>
           Create a design
         </LinkButton>
-        <p className={styles.note} aria-hidden="true">
-          it’s free, promise!
-          <svg viewBox="0 0 60 44">
-            <path d="M50 4 C 54 22, 40 36, 8 34 M8 34 l10 -8 M8 34 l9 8" />
-          </svg>
-        </p>
         <ul className={styles.perks}>
           {PERKS.map((perk) => (
             <li key={perk}>{perk}</li>

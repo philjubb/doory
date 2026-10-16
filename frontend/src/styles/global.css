@@ -1,4 +1,4 @@
-/* Doory global styles: modern reset + base typography on tokens. */
+/* Global styles: modern reset + base typography on tokens. */
 *,
 *::before,
 *::after {
@@ -20,7 +20,6 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--leading-normal);
-  font-feature-settings: 'cv11', 'ss01';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -168,13 +167,13 @@ samp {
 
 /*
  * Accessible brand aliases layered on tokens.css.
- * --color-brand-fill*  : solid ink surfaces that carry paper-white text (>= 4.5:1).
+ * --color-brand-fill*  : solid Forest surfaces that carry paper-white text (>= 4.5:1).
  * --color-brand-strong : accent text on tinted/soft backgrounds (>= 4.5:1).
  */
 :root {
   --color-brand-fill: var(--ink);
-  --color-brand-fill-hover: #4a3530;
-  --color-brand-fill-active: #160e0b;
-  --color-brand-strong: var(--ink);
+  --color-brand-fill-hover: var(--color-brand-hover);
+  --color-brand-fill-active: var(--color-brand-active);
+  --color-brand-strong: var(--ls-leaf-deep);
 }
 

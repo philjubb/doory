@@ -9,35 +9,34 @@ const FEATURES = [
   { icon: LayoutTemplate, title: 'Templates', text: 'Ready-made layouts for social posts, slides, posters, cards and more.' },
   { icon: Palette, title: 'Brand kits', text: 'Save your colours, fonts and logos once and use them in every design.' },
   { icon: Share2, title: 'Sharing and comments', text: 'Share a view, comment or edit link, with a password if you want one.' },
-  { icon: Download, title: 'Export', text: 'PNG, JPG, SVG and PDF, made in your browser. No watermark.' },
+  { icon: Download, title: 'Export', text: 'PNG, JPG, SVG and PDF, made in your browser. No watermarks.' },
   { icon: ShieldCheck, title: 'No account needed', text: 'Designs you make without an account stay in your browser until you sign up.' },
-  { icon: GitBranch, title: 'Open source', text: 'The code is on GitHub. Report bugs or send fixes there.' },
-  { icon: Server, title: 'Self-hosting', text: 'Run Doory on your own server, with Docker or without it.' },
+  { icon: GitBranch, title: 'Built on Doory', text: 'Liteseed Design runs Doory, an open-source design platform. Its code is on GitHub.' },
+  { icon: Server, title: 'Self-hosted', text: 'Designs and uploads are stored on a Liteseed server, not a third-party cloud.' },
 ]
 
 const STEPS = [
   { title: 'Start without an account', text: 'Pick a size or a template. Your design saves in this browser as you go.' },
   { title: 'Design', text: 'Add text, photos, shapes and your brand colours. Images you upload stay on your device until you sign up.' },
-  { title: 'Save it to an account', text: 'Create a free account and Doory moves the design and its images to it in one step.' },
+  { title: 'Save it to an account', text: 'Create an account and the design and its images move to it in one step.' },
 ]
 
 export default function FeaturesPage() {
   usePageMeta({
     title: 'Features',
-    description: 'Everything Doory can do: a full design editor, templates, brand kits, sharing and comments, and exports without watermarks. Free and open source.',
+    description: 'What Liteseed Design can do: a full design editor, templates, brand kits, sharing and comments, and exports without watermarks.',
     canonical: '/features',
   })
   return (
     <div className={styles.page}>
       <PageIntro
-        eyebrow="everything’s included"
+        eyebrow="Features"
         title={
           <>
-            All the tools. <Accent>None</Accent> of the paywalls.
+            Every tool, <Accent>no paid plan.</Accent>
           </>
         }
-        lead="Every feature is free. There is no paid plan."
-        bubble="it’s all free!"
+        lead="Every feature is available to every account."
       />
 
       <section className={styles.section} aria-labelledby="features-list">
@@ -79,7 +78,7 @@ export default function FeaturesPage() {
       </section>
 
       <div className={styles.end}>
-        <p className={styles.hand}>ready when you are</p>
+        <p className={styles.hand}>Get started</p>
         <LinkButton to="/create" size="lg" rightIcon={<PenLine size={18} aria-hidden="true" />}>
           Create a design
         </LinkButton>

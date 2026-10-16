@@ -27,7 +27,7 @@ const WAYS = [
     tone: 'butter',
     icon: Lightbulb,
     title: 'Got an idea?',
-    text: 'A feature you miss, a template you’d love, something that could be easier.',
+    text: 'A missing feature, a template, or something that could be simpler.',
     action: 'Share an idea',
     href: newIssueUrl('Idea: ', ''),
   },
@@ -44,20 +44,19 @@ const WAYS = [
 export default function ContactPage() {
   usePageMeta({
     title: 'Contact',
-    description: 'Get in touch with the Doory project: report a bug, suggest an idea or report a security problem privately.',
+    description: 'Report a bug, suggest an idea or report a security problem privately to the Doory project that Liteseed Design runs on.',
     canonical: '/contact',
   })
   return (
     <div className={styles.page}>
       <PageIntro
-        eyebrow="say hello"
+        eyebrow="Contact"
         title={
           <>
-            We’d <Accent>love</Accent> to hear from you.
+            Report a bug or <Accent>suggest a change</Accent>
           </>
         }
-        lead="Doory is made in the open, so we talk in the open too: on GitHub, where everyone can follow along and chime in."
-        bubble="hello friend!"
+        lead="Liteseed Design runs Doory, an open-source design platform. Bugs and ideas go to the Doory project on GitHub, where its maintainers can see them."
       />
 
       <ul className={styles.ways}>
@@ -100,11 +99,11 @@ function NoteForm() {
   return (
     <section className={styles.note} aria-labelledby="note-title">
       <div className={styles.noteHead}>
-        <p className={styles.hand}>or write us a note</p>
+        <p className={styles.hand}>Or write a note</p>
         <h2 id="note-title" className={styles.noteTitle}>
           Leave a note
         </h2>
-        <p className={styles.noteLead}>We’ll open it as a new issue on GitHub for you to check and post. Issues are public, so please leave out anything private.</p>
+        <p className={styles.noteLead}>This opens a new issue on GitHub for you to check and post. Issues are public, so please leave out anything private.</p>
       </div>
       <form className={styles.form} onSubmit={submit} noValidate>
         <Select label="What’s it about?" value={topic} onChange={(event) => setTopic(event.target.value as Topic)} options={TOPICS.map(({ value, label }) => ({ value, label }))} />

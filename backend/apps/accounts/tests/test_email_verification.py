@@ -151,7 +151,7 @@ def test_reset_email_subject_and_copy(client, user):
 
     client.post(PASSWORD_RESET, {"email": user.email}, format="json")
     message = mail.outbox[0]
-    assert message.subject == "Reset your Doory password"
+    assert message.subject == "Reset your Liteseed Design password"
     assert "Choose a new password" in message.alternatives[0][0]
     assert "/reset-password?uid=" in message.body
 

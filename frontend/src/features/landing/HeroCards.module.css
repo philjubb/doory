@@ -24,49 +24,29 @@
   width: 15.625rem;
   height: 23.125rem;
   margin-left: -7.8125rem;
-  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.25, 1.2);
+  transition: transform var(--duration-slow) var(--ease-out);
 }
 
-/* washi tape */
-.art > li::before {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: -0.8rem;
-  left: 50%;
-  width: 5.75rem;
-  height: 1.625rem;
-  margin-left: -2.875rem;
-  background:
-    repeating-linear-gradient(45deg, rgb(255 255 255 / 0.45) 0 6px, transparent 6px 12px),
-    var(--tape);
-  opacity: 0.9;
-  transform: rotate(-4deg);
-  pointer-events: none;
-}
 
 .left {
-  --tape: var(--pastel-mint);
-  transform: translateX(-14.7rem) translateY(1.1rem) rotate(-11deg);
+  transform: translateX(-14.7rem) translateY(1.1rem) rotate(-6deg);
 }
 
 .art > .middle {
-  --tape: var(--pastel-pink);
   z-index: 2;
   width: 15rem;
   height: 26.67rem;
   margin-left: -7.5rem;
-  transform: translateY(-0.9rem) rotate(1.5deg);
+  transform: translateY(-0.9rem) rotate(0deg);
 }
 
 .right {
-  --tape: var(--pastel-sky);
-  transform: translateX(14.7rem) translateY(1.1rem) rotate(10deg);
+  transform: translateX(14.7rem) translateY(1.1rem) rotate(6deg);
 }
 
 .art:hover .left,
 .art:focus-within .left {
-  transform: translateX(-16.4rem) translateY(0.6rem) rotate(-14deg);
+  transform: translateX(-16.4rem) translateY(0.6rem) rotate(-8deg);
 }
 
 .art:hover > .middle,
@@ -76,7 +56,7 @@
 
 .art:hover .right,
 .art:focus-within .right {
-  transform: translateX(16.4rem) translateY(0.6rem) rotate(13deg);
+  transform: translateX(16.4rem) translateY(0.6rem) rotate(8deg);
 }
 
 .art > li:hover,
@@ -108,14 +88,6 @@
   text-align: center;
 }
 
-/* a soft paper sheen */
-.card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(125deg, rgb(255 255 255 / 0.35), transparent 40%);
-  pointer-events: none;
-}
 
 .caption {
   position: absolute;
@@ -123,10 +95,12 @@
   bottom: -2.6rem;
   left: 0;
   color: var(--color-text-muted);
-  font-family: var(--font-hand);
-  font-size: 1.55rem;
-  font-weight: 700;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 /* A template picture filling its card. */
@@ -152,12 +126,12 @@
   .left,
   .art:hover .left,
   .art:focus-within .left {
-    transform: translateX(-12.5rem) translateY(1.1rem) rotate(-11deg);
+    transform: translateX(-12.5rem) translateY(1.1rem) rotate(-6deg);
   }
 
   .right,
   .art:hover .right,
   .art:focus-within .right {
-    transform: translateX(12.5rem) translateY(1.1rem) rotate(10deg);
+    transform: translateX(12.5rem) translateY(1.1rem) rotate(6deg);
   }
 }

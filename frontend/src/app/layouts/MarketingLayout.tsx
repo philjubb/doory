@@ -1,10 +1,9 @@
-import { GitBranch, Menu as MenuIcon, X } from 'lucide-react'
+import { Menu as MenuIcon, X } from 'lucide-react'
 import { Suspense, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { PageLoader } from '@/app/PageLoader'
 import { AccountMenu } from '@/features/auth/AccountMenu'
 import { useAuth } from '@/features/auth/AuthProvider'
-import bunny from '@/assets/bunny-sticker.webp'
 import { REPO_URL } from '@/lib/links'
 import { IconButton, LinkButton, Logo } from '@/ui'
 import { cx } from '@/lib/cx'
@@ -25,9 +24,6 @@ function HeaderNav({ onNavigate, orientation }: { onNavigate?: () => void; orien
           {item.label}
         </NavLink>
       ))}
-      <a href={REPO_URL} className={styles.navLink} target="_blank" rel="noopener noreferrer" onClick={onNavigate}>
-        <GitBranch size={16} aria-hidden="true" /> GitHub
-      </a>
     </nav>
   )
 }
@@ -44,7 +40,7 @@ export function MarketingHeader() {
   return (
     <header className={styles.header}>
       <div className={styles.bar}>
-        <Link to="/" className={styles.logo} aria-label="Doory home">
+        <Link to="/" className={styles.logo} aria-label="Liteseed Design home">
           <Logo height={30} />
         </Link>
         <div className={styles.desktopNav}>
@@ -95,14 +91,10 @@ export function MarketingHeader() {
 export function MarketingFooter() {
   return (
     <footer className={styles.footer}>
-      <svg className={styles.wave} viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 28 C 160 6, 320 6, 480 22 S 800 40, 960 20 S 1280 2, 1440 22 L 1440 40 L 0 40 Z" />
-      </svg>
-      <img className={styles.peek} src={bunny} alt="" width={110} height={150} draggable={false} />
       <div className={styles.footerInner}>
         <div className={styles.footerBrand}>
-          <Logo height={28} />
-          <p>Free, open-source design for everyone. Make it, share it, keep it.</p>
+          <Logo height={28} tone="dark" />
+          <p>Posts, slides, posters and logos, made in your browser. Your designs stay on this server.</p>
         </div>
         <nav aria-label="Footer" className={styles.footerNav}>
           <div>
@@ -120,7 +112,7 @@ export function MarketingFooter() {
             </ul>
           </div>
           <div>
-            <h2 className={styles.footerHeading}>Get to know us</h2>
+            <h2 className={styles.footerHeading}>About</h2>
             <ul>
               <li>
                 <Link to="/features">Features</Link>
@@ -134,21 +126,11 @@ export function MarketingFooter() {
             </ul>
           </div>
           <div>
-            <h2 className={styles.footerHeading}>Open source</h2>
+            <h2 className={styles.footerHeading}>Built on Doory</h2>
             <ul>
               <li>
                 <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-                  Source on GitHub
-                </a>
-              </li>
-              <li>
-                <a href={`${REPO_URL}/issues`} target="_blank" rel="noopener noreferrer">
-                  Report an issue
-                </a>
-              </li>
-              <li>
-                <a href={`${REPO_URL}#quick-start`} target="_blank" rel="noopener noreferrer">
-                  Self-host Doory
+                  Doory source code
                 </a>
               </li>
             </ul>
@@ -161,8 +143,9 @@ export function MarketingFooter() {
         <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
           github.com/shaongitbd/doory
         </a>{' '}
-        · Released under the Attribution Assurance License. No ads. No watermarks.
+        · Released under the Attribution Assurance License.
       </p>
+      <p className={styles.business}>Liteseed Digital Media, a sole proprietorship of Phillip Jubb · BC reg. FM0709020</p>
     </footer>
   )
 }

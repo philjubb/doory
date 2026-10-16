@@ -1,61 +1,74 @@
 /*
- * Doory design tokens — the lilac theme: a soft lavender page, ink-brown lines and pastel accents taken from the
- * Doory bunny.
+ * Design tokens — the Liteseed theme (Liteseed brand guidelines v1): Forest text on a Paper ground, Leaf for the
+ * green accents, Sun as the single highlight.
  * Components must use these variables and never hard-code colours.
- * There is one theme: Doory is always light.
+ * There is one theme: the app is always light.
+ *
+ * The variable names (--violet-*, --pastel-*, --ink, --accent-lilac) are kept from upstream Doory so CSS merged from
+ * upstream picks up the Liteseed colours; read "violet" as "the green scale".
  */
 :root {
-  /* Brand — violet scale */
-  --violet-50: #f5f2ff;
-  --violet-100: #ece6ff;
-  --violet-200: #dcd2ff;
-  --violet-300: #c9bcff;
-  --violet-400: #a996f5;
-  --violet-500: #8b75ea;
-  --violet-600: #6a52d9;
-  --violet-700: #5b43c4;
-  --violet-800: #4a35a3;
-  --violet-900: #3a2b7d;
-  --violet-950: #221a4a;
+  /* Liteseed palette */
+  --ls-forest: #1f3a2e;
+  --ls-paper: #f5f2ea;
+  --ls-leaf: #3e8b5a;
+  --ls-leaf-deep: #2e6b45;
+  --ls-sun: #f0b429;
 
-  /* Ink and pastels — the bunny's outline and colours, used for illustration and accents */
-  --ink: #2b1c17;
-  --paper: #fffdf8;
-  --pastel-lilac: #c9bcff;
-  --pastel-pink: #ffc9d3;
-  --pastel-blush: #ffa9b9;
-  --pastel-butter: #ffe8a8;
-  --pastel-mint: #c4ecd9;
-  --pastel-sky: #cfe1ff;
+  /* Brand scale — green, from Leaf tints to Forest */
+  --violet-50: #f0f5f1;
+  --violet-100: #e3eee6;
+  --violet-200: #c9dfd0;
+  --violet-300: #a7cbb2;
+  --violet-400: #6faf86;
+  --violet-500: var(--ls-leaf);
+  --violet-600: var(--ls-leaf-deep);
+  --violet-700: #285c3c;
+  --violet-800: #234d34;
+  --violet-900: #1f3f2f;
+  --violet-950: #142820;
 
-  /* Semantic — light. The accent is the bunny's ink; selected and hovered things get a pale lilac wash, and violet is
-     kept for the canvas selection handles and as a drawn accent (--accent-lilac), never for whole surfaces. */
+  /* Ink, paper and tints — used for illustration and accents */
+  --ink: var(--ls-forest);
+  --paper: var(--ls-paper);
+  --pastel-lilac: #c9dfd0;
+  --pastel-pink: #f8dc94;
+  --pastel-blush: var(--ls-sun);
+  --pastel-butter: #fbe9b7;
+  --pastel-mint: #d5e8da;
+  --pastel-sky: #e1e8e3;
+
+  /* Semantic — light. The accent is Forest; selected and hovered things get a pale Leaf wash, and Leaf Deep is the
+     drawn accent and link colour (--accent-lilac). */
   --color-brand: var(--ink);
-  --color-brand-hover: #4a3530;
-  --color-brand-active: #160e0b;
-  --color-brand-soft: #f1edff;
-  --color-brand-soft-hover: #e4ddff;
+  --color-brand-hover: #2b4e3e;
+  --color-brand-active: #142820;
+  --color-brand-soft: #e6efe8;
+  --color-brand-soft-hover: #d7e7db;
   --color-on-brand: var(--paper);
-  --accent-lilac: #7a64e0;
+  --accent-lilac: var(--ls-leaf-deep);
 
-  /* Call to action: ink pills with a lilac offset shadow */
+  /* Call to action: Forest buttons with Paper text; the one large CTA of a view is Sun with Forest text */
   --color-cta: var(--ink);
-  --color-cta-hover: #3f2b24;
+  --color-cta-hover: #2b4e3e;
   --color-on-cta: var(--paper);
-  --color-cta-shadow: var(--violet-300);
+  --color-cta-shadow: transparent;
+  --color-highlight: var(--ls-sun);
+  --color-highlight-hover: #f4c24f;
+  --color-on-highlight: var(--ls-forest);
 
-  --color-bg: #f9f7ff;
-  --color-bg-subtle: #f6f2f6;
-  --color-bg-muted: #f0e9ee;
+  --color-bg: var(--ls-paper);
+  --color-bg-subtle: #efebe1;
+  --color-bg-muted: #e8e3d7;
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
-  --color-canvas-workspace: #ebe7f5; /* area around the artboard in the editor */
-  --color-border: #ebe2e8;
-  --color-border-strong: #d9ccd5;
+  --color-canvas-workspace: #e7e3d8; /* area around the artboard in the editor */
+  --color-border: #e1dccf;
+  --color-border-strong: #cbc4b3;
   --color-text: var(--ink);
-  --color-text-muted: #6f6170;
-  --color-text-subtle: #73667a;
-  --color-overlay: rgb(43 28 23 / 0.5);
+  --color-text-muted: #4c5c54;
+  --color-text-subtle: #5a6862;
+  --color-overlay: rgb(31 58 46 / 0.5);
   /* The slideshow stage is black and its text white in every theme: it is a projected screen, not chrome. */
   --color-stage: #000000;
   --color-on-stage: #ffffff;
@@ -69,15 +82,16 @@
   --color-info: #1d4ed8;
   --color-info-soft: #dbeafe;
 
-  --focus-ring: 0 0 0 3px rgb(122 100 224 / 0.35);
-  --selection-color: #6a52d9; /* canvas selection handles & guides */
-  --guide-color: #ec5f98;
+  --focus-ring: 0 0 0 3px rgb(46 107 69 / 0.3);
+  --selection-color: var(--ls-leaf-deep); /* canvas selection handles & guides */
+  --guide-color: #d97706;
 
   /* Typography */
-  --font-sans: 'Nunito Variable', 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-hand: 'Caveat Variable', 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
-  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-sans: 'IBM Plex Sans Variable', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  /* Upstream's handwritten accent font; in Liteseed these spots are small Plex Mono labels. */
+  --font-hand: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --text-xs: 0.75rem;
   --text-sm: 0.8125rem;
   --text-base: 0.9375rem;
@@ -104,16 +118,18 @@
   --space-24: 6rem;
 
   /* Shape & depth */
-  --radius-sm: 6px;
+  /* Liteseed: 4 inputs and tags, 10 buttons and cards, 22 panels and app tiles */
+  --radius-sm: 4px;
   --radius-md: 10px;
   --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-xl: 22px;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 2px rgb(60 40 110 / 0.07), 0 1px 1px rgb(43 28 23 / 0.04);
-  --shadow-md: 0 4px 12px rgb(60 40 110 / 0.1), 0 2px 4px rgb(43 28 23 / 0.04);
-  --shadow-lg: 0 18px 40px rgb(60 40 110 / 0.16), 0 4px 10px rgb(43 28 23 / 0.06);
-  --shadow-artboard: 0 2px 6px rgb(60 40 110 / 0.12), 0 12px 32px rgb(60 40 110 / 0.12);
-  --shadow-card: 0 0 0 1px rgb(43 28 23 / 0.06), 0 2px 0 rgb(43 28 23 / 0.05), 0 28px 50px -18px rgb(90 60 150 / 0.38);
+  /* Flat: a hairline where upstream had soft shadows; floating menus and dialogs keep a light lift. */
+  --shadow-sm: 0 0 0 1px rgb(31 58 46 / 0.06);
+  --shadow-md: 0 0 0 1px rgb(31 58 46 / 0.08), 0 4px 12px rgb(31 58 46 / 0.08);
+  --shadow-lg: 0 0 0 1px rgb(31 58 46 / 0.08), 0 16px 36px rgb(31 58 46 / 0.14);
+  --shadow-artboard: 0 0 0 1px rgb(31 58 46 / 0.08), 0 8px 24px rgb(31 58 46 / 0.1);
+  --shadow-card: 0 0 0 1px rgb(31 58 46 / 0.1);
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);

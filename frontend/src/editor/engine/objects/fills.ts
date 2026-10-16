@@ -10,8 +10,8 @@ export type FillSpec =
   | { type: 'gradient'; kind: 'linear' | 'radial'; angle: number; stops: GradientStop[] }
 
 export const DEFAULT_STOPS: GradientStop[] = [
-  { offset: 0, color: '#7a64e0' },
-  { offset: 1, color: '#f59e0b' },
+  { offset: 0, color: '#2e6b45' },
+  { offset: 1, color: '#f0b429' },
 ]
 
 type AnyGradient = Gradient<'linear'> | Gradient<'radial'>

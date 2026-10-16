@@ -8,7 +8,7 @@ import { asDory } from './dory'
 
 export const DEFAULT_SHADOW: ShadowSpec = { color: '#00000066', blur: 12, offsetX: 4, offsetY: 6 }
 export const DEFAULT_OUTLINE = { color: '#000000', width: 2 }
-export const DEFAULT_GLOW = { color: '#7a64e0', blur: 18 }
+export const DEFAULT_GLOW = { color: '#3e8b5a', blur: 18 }
 export const DEFAULT_HIGHLIGHT = { color: '#fde047' }
 
 function isText(obj: FabricObject): obj is Textbox {

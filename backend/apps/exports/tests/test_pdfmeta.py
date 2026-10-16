@@ -111,7 +111,7 @@ def test_language_title_and_creator():
     )
     assert out.trailer["/Root"]["/Lang"] == "de-CH"
     assert out.metadata.title == "Menu"
-    assert out.metadata.creator == "Doory"
+    assert out.metadata.creator == "Liteseed Design"
 
 
 def test_an_empty_title_keeps_the_one_the_browser_wrote():

@@ -14,12 +14,12 @@ export interface CanvasTheme {
 }
 
 const FALLBACK: CanvasTheme = {
-  selection: '#6a52d9',
-  guide: '#ec5f98',
+  selection: '#2e6b45',
+  guide: '#d97706',
   surface: '#ffffff',
-  muted: '#73667a',
-  text: '#2b1c17',
-  workspace: '#ebe7f5',
+  muted: '#5a6862',
+  text: '#1f3a2e',
+  workspace: '#e7e3d8',
 }
 
 export function readCanvasTheme(el: Element = document.documentElement): CanvasTheme {

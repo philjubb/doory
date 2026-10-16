@@ -152,7 +152,7 @@ AUTH_EMAIL_COOLDOWN_SECONDS = 60  # minimum gap between reset / verification ema
 # ---- Email ----
 EMAIL_CONFIG = env.email("EMAIL_URL", default="consolemail://")
 vars().update(EMAIL_CONFIG)
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="Doory <no-reply@localhost>")
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="Liteseed Design <no-reply@localhost>")
 EMAIL_SEND_ASYNC = env.bool("EMAIL_SEND_ASYNC", default=True)  # send off the request thread
 
 # ---- Integrations (all optional) ----
@@ -192,7 +192,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Doory API",
+    "TITLE": "Liteseed Design API",
     "DESCRIPTION": "Open-source design platform API.",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
@@ -211,22 +211,23 @@ SPECTACULAR_SETTINGS = {
 
 # ---- Admin theme (django-unfold) ----
 UNFOLD = {
-    "SITE_TITLE": "Doory Admin",
-    "SITE_HEADER": "Doory",
-    "SITE_SYMBOL": "palette",
+    "SITE_TITLE": "Liteseed Design Admin",
+    "SITE_HEADER": "Liteseed Design",
+    "SITE_SYMBOL": "eco",
     "COLORS": {
+        # Liteseed green scale, Leaf (500) and Leaf Deep (600) at the centre
         "primary": {
-            "50": "254 242 242",
-            "100": "254 226 226",
-            "200": "254 202 202",
-            "300": "252 165 165",
-            "400": "248 113 113",
-            "500": "239 68 68",
-            "600": "220 38 38",
-            "700": "185 28 28",
-            "800": "153 27 27",
-            "900": "127 29 29",
-            "950": "69 10 10",
+            "50": "240 245 241",
+            "100": "227 238 230",
+            "200": "201 223 208",
+            "300": "167 203 178",
+            "400": "111 175 134",
+            "500": "62 139 90",
+            "600": "46 107 69",
+            "700": "40 92 60",
+            "800": "35 77 52",
+            "900": "31 63 47",
+            "950": "20 40 32",
         },
     },
 }

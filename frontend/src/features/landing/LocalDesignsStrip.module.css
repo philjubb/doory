@@ -21,32 +21,30 @@
 }
 
 .eyebrow {
-  padding: 0 var(--space-2);
-  color: var(--ink);
-  font-family: var(--font-hand);
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1;
-  background: linear-gradient(transparent 55%, var(--pastel-pink) 55%, var(--pastel-pink) 92%, transparent 92%);
-  transform: rotate(-2deg);
+  color: var(--accent-lilac);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .heading {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .lead {
   color: var(--color-text-muted);
-  font-weight: 600;
 }
 
 .signup {
   color: var(--ink);
   font-weight: 800;
   text-decoration: underline;
-  text-decoration-color: var(--pastel-blush);
+  text-decoration-color: var(--ls-leaf);
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
@@ -68,44 +66,21 @@
   padding: var(--space-2) var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
   background: #ffffff;
-  box-shadow:
-    0 0 0 1px rgb(43 28 23 / 0.06),
-    0 16px 26px -16px rgb(43 28 23 / 0.4);
-  transform: rotate(var(--tilt, -1.5deg));
+  box-shadow: 0 0 0 1px rgb(31 58 46 / 0.06);
   transition: transform var(--duration-slow) var(--ease-out);
 }
 
 .card:nth-child(3n + 2) {
-  --tilt: 1.2deg;
-  --tape: var(--pastel-mint);
 }
 
 .card:nth-child(3n + 3) {
-  --tilt: -0.5deg;
-  --tape: var(--pastel-pink);
 }
 
 .card:hover,
 .card:focus-within {
-  transform: rotate(0deg) translateY(-4px);
+  transform: translateY(-2px);
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: -0.65rem;
-  left: 50%;
-  width: 4.25rem;
-  height: 1.3rem;
-  margin-left: -2.125rem;
-  background:
-    repeating-linear-gradient(45deg, rgb(255 255 255 / 0.5) 0 6px, transparent 6px 12px),
-    var(--tape, var(--pastel-butter));
-  opacity: 0.9;
-  transform: rotate(-3deg);
-  pointer-events: none;
-}
 
 .link {
   display: flex;
@@ -140,10 +115,12 @@
 .meta {
   padding: 0 var(--space-1);
   color: var(--color-text-muted);
-  font-family: var(--font-hand);
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .delete {

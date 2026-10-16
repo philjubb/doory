@@ -17,7 +17,7 @@ _PRINTABLE_ASCII = re.compile(r"^[\x20-\x7e]+$")
 _PAGE_ID = re.compile(r"^[A-Za-z0-9_.:-]{1,64}$")
 COORDINATE_LIMIT = 1_000_000
 COMMENT_MAX_LENGTH = 2000
-ANONYMOUS_NAME = "Doory user"
+ANONYMOUS_NAME = "Liteseed Design user"
 
 
 def public_name(user) -> str:

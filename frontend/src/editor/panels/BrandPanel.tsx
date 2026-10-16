@@ -95,7 +95,7 @@ function FontRole({ role, family, onPick, onAdd, onUse, canUse }: { role: BrandF
 function AddColor({ onAdd }: { onAdd: (color: string) => void }) {
   const ref = useRef<HTMLButtonElement>(null)
   const [open, setOpen] = useState(false)
-  const [color, setColor] = useState('#7a64e0')
+  const [color, setColor] = useState('#3e8b5a')
   return (
     <>
       <button ref={ref} type="button" className={styles.addBtn} aria-label={t.brand.addColor} aria-haspopup="dialog" aria-expanded={open} title={t.brand.addColor} data-testid="brand-add-color" onClick={() => setOpen((o) => !o)}>

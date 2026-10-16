@@ -49,7 +49,7 @@ export default function CreatePage() {
       <EmptyState
         icon={<TriangleAlert size={28} />}
         title="Your browser is out of space"
-        description="Doory couldn’t store a new design here. Free up some space, or sign up to keep designs in your account instead."
+        description="Liteseed Design couldn’t store a new design here. Free up some space, or sign up to keep designs in your account instead."
         role="alert"
         action={<Button onClick={() => navigate('/signup')}>Create a free account</Button>}
       />

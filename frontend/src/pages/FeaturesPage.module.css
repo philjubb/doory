@@ -23,19 +23,20 @@
 
 .hand {
   color: var(--color-text-muted);
-  font-family: var(--font-hand);
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1;
-  transform: rotate(-2deg);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .heading {
   max-width: 36rem;
   margin-top: var(--space-3);
   font-size: clamp(1.9rem, 4vw, 2.75rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Features: plain cards, one per feature */
@@ -89,18 +90,15 @@
   margin-top: var(--space-10);
 }
 
-/* a dashed squiggle joining the three numbers */
+/* a hairline joining the three numbers */
 .steps::before {
   content: '';
   position: absolute;
   top: 2rem;
   right: 16%;
   left: 16%;
-  height: 12px;
-  background: var(--ink);
-  opacity: 0.35;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 6 C 40 0, 70 12, 110 6 S 190 0, 230 6 S 280 12, 298 6' fill='none' stroke='black' stroke-width='2' stroke-dasharray='6 7' stroke-linecap='round'/%3E%3C/svg%3E")
-    center / 100% 100% no-repeat;
+  height: 1px;
+  background: var(--color-border-strong);
 }
 
 .step {
@@ -120,8 +118,7 @@
   background: var(--color-brand-soft);
   color: var(--accent-lilac);
   font-family: var(--font-display);
-  font-size: 1.9rem;
-  font-style: italic;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -135,7 +132,6 @@
 .stepText {
   max-width: 19rem;
   color: var(--color-text-muted);
-  font-weight: 600;
 }
 
 .end {

@@ -17,10 +17,10 @@
 /* a white frame with a soft shadow; on hover it lifts a little */
 .thumb {
   padding: 6px;
-  border: 1px solid rgb(43 28 23 / 0.08);
+  border: 1px solid rgb(31 58 46 / 0.08);
   border-radius: var(--radius-lg);
   background: #ffffff;
-  box-shadow: 0 14px 24px -16px rgb(43 28 23 / 0.35);
+  box-shadow: none;
   transition:
     transform var(--duration-slow) var(--ease-out),
     box-shadow var(--duration-slow) var(--ease-out),

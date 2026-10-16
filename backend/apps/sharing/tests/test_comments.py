@@ -73,7 +73,7 @@ def test_author_email_is_never_exposed(anon, comment_link, make_comment, strange
     make_comment(stranger)
     response = anon.get(shared_comments(comment_link))
     assert "stranger@example.com" not in response.content.decode()
-    assert response.json()["results"][0]["author"]["name"] == "Doory user"
+    assert response.json()["results"][0]["author"]["name"] == "Liteseed Design user"
 
 
 def test_comments_are_listed_oldest_first_and_paginated(anon, comment_link, make_comment, stranger):

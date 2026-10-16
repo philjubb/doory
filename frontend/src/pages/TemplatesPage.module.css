@@ -16,19 +16,18 @@
 
 .eyebrow {
   align-self: flex-start;
-  padding: 0 var(--space-2);
-  color: var(--ink);
-  font-family: var(--font-hand);
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1;
-  background: linear-gradient(transparent 55%, var(--pastel-butter) 55%, var(--pastel-butter) 92%, transparent 92%);
-  transform: rotate(-2deg);
+  color: var(--accent-lilac);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .title {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.035em;
 }
 

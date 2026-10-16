@@ -9,146 +9,44 @@
   text-align: center;
 }
 
-/* The bunny, big, standing on its own little shadow */
-.stage {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  height: 22.5rem;
-}
-
-.bunny {
-  position: relative;
-  z-index: 1;
+/* The sprout, the brand's one filled motif */
+.sprout {
   width: auto;
-  height: 20.625rem;
-  transform-origin: 50% 95%;
-  animation: bob 4.5s ease-in-out infinite;
-  cursor: pointer;
-  user-select: none;
+  height: 4.5rem;
+  margin-top: var(--space-12);
 }
 
-.bunny:hover {
-  animation: wiggle 0.6s ease-in-out;
-}
-
-.ground {
-  width: 10.5rem;
-  height: 1.125rem;
-  margin-top: -1.1rem;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-lilac) 20%, transparent);
-  animation: squish 4.5s ease-in-out infinite;
-}
-
-.bubble {
-  position: absolute;
-  top: 2.75rem;
-  right: -9.5rem;
-  padding: 0.6rem 1.1rem 0.75rem;
-  background: var(--color-surface);
-  border: 2.5px solid var(--color-text);
-  border-radius: 22px 22px 22px 6px;
-  box-shadow: 4px 4px 0 var(--pastel-pink);
-  font-family: var(--font-hand);
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-  transform: rotate(6deg);
-}
-
-.hearts {
-  position: absolute;
-  top: 5.5rem;
-  left: -4rem;
-  color: var(--pastel-blush);
-  font-size: 1.4rem;
-  line-height: 1.1;
-  transform: rotate(-14deg);
-}
-
-.hearts span:last-child {
-  display: block;
-  margin-left: 1.1rem;
-  font-size: 0.95rem;
-}
-
-@keyframes bob {
-  0%,
-  100% {
-    transform: rotate(-3deg) translateY(0);
-  }
-
-  50% {
-    transform: rotate(0deg) translateY(-12px);
-  }
-}
-
-@keyframes squish {
-  0%,
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scaleX(0.82);
-    opacity: 0.7;
-  }
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-
-  25% {
-    transform: rotate(-7deg);
-  }
-
-  75% {
-    transform: rotate(7deg);
-  }
+.eyebrow {
+  margin-top: var(--space-6);
+  color: var(--accent-lilac);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .title {
-  margin-top: var(--space-6);
-  font-size: clamp(2.4rem, 6vw, 4.25rem);
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
-}
-
-.accent {
-  position: relative;
-  z-index: 0;
+  max-width: 52rem;
+  margin-top: var(--space-4);
+  font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 700;
-  white-space: nowrap;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
-.accent svg {
-  position: absolute;
-  z-index: -1;
-  left: -3%;
-  bottom: -0.6rem;
-  width: 106%;
-  height: 1.1rem;
-  fill: none;
-  stroke: var(--pastel-blush);
-  stroke-width: 6;
-  stroke-linecap: round;
+/* Leaf is fine here: the title is well above 24px */
+.accent {
+  color: var(--ls-leaf);
+  font-style: normal;
 }
 
 .lead {
-  max-width: 30rem;
+  max-width: 34rem;
   margin-top: var(--space-5);
   color: var(--color-text-muted);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.55;
 }
 
 /* Create a design */
@@ -161,44 +59,31 @@
   margin-top: var(--space-16);
 }
 
-.note {
-  position: absolute;
-  top: -1.4rem;
-  left: calc(50% + 10rem);
-  width: 9.5rem;
-  color: var(--accent-lilac);
-  font-family: var(--font-hand);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.05;
-  text-align: left;
-  transform: rotate(-6deg);
-}
-
-.note svg {
-  display: block;
-  width: 3.75rem;
-  height: 2.75rem;
-  margin: 0.25rem 0 0 -0.6rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-}
-
 .perks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-2) var(--space-5);
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.perks li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .perks li::before {
-  content: '✿ ';
-  color: var(--pastel-blush);
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ls-leaf);
 }
 
 /* Or start with a size */
@@ -212,10 +97,12 @@
 
 .sizesLabel {
   color: var(--color-text-muted);
-  font-family: var(--font-hand);
-  font-size: 1.45rem;
-  font-weight: 700;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .chips {
@@ -232,11 +119,11 @@
   height: 2.25rem;
   padding: 0 var(--space-4);
   background: var(--color-surface);
-  border: 1.5px solid var(--color-border-strong);
-  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
   color: var(--color-text);
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 500;
   transition:
     transform var(--duration-fast) var(--ease-out),
     border-color var(--duration-fast) var(--ease-out),
@@ -246,63 +133,22 @@
 .chip:hover {
   text-decoration: none;
   border-color: var(--color-text);
-  box-shadow: 2px 2px 0 var(--color-cta-shadow);
-  transform: translate(-1px, -1px) rotate(-1.5deg);
-}
-
-.chips li:nth-child(odd) .chip:hover {
-  transform: translate(-1px, -1px) rotate(1.5deg);
+  background: var(--color-brand-soft);
 }
 
 .customChip {
   height: 2.25rem;
   color: var(--color-brand-strong);
-  font-weight: 700;
-}
-
-@media (max-width: 900px) {
-  .bubble {
-    right: -7.5rem;
-  }
-
-  .note {
-    display: none;
-  }
+  font-weight: 500;
 }
 
 @media (max-width: 640px) {
-  .stage {
-    height: 17rem;
-  }
-
-  .bunny {
-    height: 15.3rem;
-  }
-
-  .ground {
-    width: 8rem;
-  }
-
-  .hearts {
-    display: none;
-  }
-
-  .bubble {
-    top: 0.6rem;
-    right: -3.4rem;
-    padding: 0.45rem 0.85rem 0.6rem;
-    font-size: 1.35rem;
+  .sprout {
+    height: 3.5rem;
+    margin-top: var(--space-8);
   }
 
   .create {
     margin-top: var(--space-12);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bunny,
-  .bunny:hover,
-  .ground {
-    animation: none;
   }
 }
